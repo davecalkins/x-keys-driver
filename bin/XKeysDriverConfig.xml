@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+
+- each Event binds 1 or more keys to a set of actions, if multiple keys
+  are specified, then any or all of them being pressed results in a single
+  triggering of the event.  this is to support putting caps on a group
+  of keys so those keys all function as a single key
+
+- keys are referenced using their zero-based column and row positions taken
+  with the keyboard oriented so that it has 12 columns with 7 rows each
+
+- an Event can optionally list a key position value which means the event
+  is only active when the 8 position key is at the specified position
+
+- the keyboard comes with 6 keys, each having an identifier.  the keys
+  have varying levels of access to the positions shown below.
+  
+    PRG 1,0
+    REG   0,2
+    MA1   0,2,3
+    X     0,2,3,4
+    Z     0,2,3,4,5
+    MA2   0,2,3,4,5,6
+    S   1,0,2,3,4,5,6,7
+
+- the CardReader node only serves to optionally restrict the card
+  reader to only being active when the key is in the specified position
+  
+- when a card is swiped, the data is input as though the user had
+  keyed in the characters on a regular keyboard
+
+-->
+
+<XKeysDriverConfig>
+
+   <CardReader keyPosition="1" />
+
+   <Events>
+
+      <!-- 
+        -- A-Z and Show More keys
+        -->
+      
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="0" row="6" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="A" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="0" row="5" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="B" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="0" row="4" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="C" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="1" row="6" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="D" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="1" row="5" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="E" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="1" row="4" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="F" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="2" row="6" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="G" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="2" row="5" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="H" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="2" row="4" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="I" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="3" row="6" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="J" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="3" row="5" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="K" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="3" row="4" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="L" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="4" row="6" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="M" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="4" row="5" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="N" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="4" row="4" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="O" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="5" row="6" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="P" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="5" row="5" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="Q" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="5" row="4" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="R" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="6" row="6" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="S" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="6" row="5" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="T" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="6" row="4" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="U" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="7" row="6" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="V" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="7" row="5" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="W" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="7" row="4" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="X" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="8" row="6" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="Y" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="8" row="5" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="Z" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="8" row="4" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="*" />
+         </Actions>
+      </Event>
+      
+      <!-- 
+        -- Numeric Key Pad, Submit Enviar, and .
+        -->
+        
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="0" row="2" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="1" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="0" row="1" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="2" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="0" row="0" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="3" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="1" row="2" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="4" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="1" row="1" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="5" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="1" row="0" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="6" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="2" row="2" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="7" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="2" row="1" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="8" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="2" row="0" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="9" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="3" row="2" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="\n" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="3" row="1" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="0" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="3" row="0" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="." />
+         </Actions>
+      </Event>
+
+      <!-- 
+        -- Done and Reset
+        -->
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="10" row="5" />
+            <Key col="11" row="5" />
+            <Key col="10" row="4" />
+            <Key col="11" row="4" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="\n" />
+         </Actions>
+      </Event>
+
+      <Event keyPosition="1">
+         <Keys>
+            <Key col="10" row="2" />
+            <Key col="11" row="2" />
+            <Key col="10" row="1" />
+            <Key col="11" row="1" />
+         </Keys>
+         <Actions>
+            <Action type="SendInput" arg="/" />
+         </Actions>
+      </Event>
+      
+   </Events>
+  
+</XKeysDriverConfig>
+
+
